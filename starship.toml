@@ -24,7 +24,9 @@ $java\
 $docker_context\
 [](fg:#1d2230 bg:#212736)\
 $time\
-$cmd_duration
+$cmd_duration\
+[](fg:#121620 bg:#1d2230)\
+$status
 ╰─$character"""
 
 [fill]
@@ -44,6 +46,22 @@ fish_style_pwd_dir_length = 1
 "E:/" = "/e/"
 "D:/" = "/d/"
 "C:/" = "/c/"
+
+[status]
+style = 'bg:#121620 fg:#a0a9cb'
+format = '[$symbol $int ]($style) '
+symbol = '✗'
+not_executable_symbol = '✗'
+not_found_symbol = '✗'
+sigint_symbol = '^C'
+signal_symbol = '✗'
+success_symbol = '✓'
+map_symbol = true
+disabled = false
+pipestatus = true
+pipestatus_separator = '[| ](bg:#121620 fg:#a0a9cb)'
+pipestatus_format = '$pipestatus'
+pipestatus_segment_format = '[$symbol $int ]($style)'
 
 [cmd_duration]
 min_time = 500
